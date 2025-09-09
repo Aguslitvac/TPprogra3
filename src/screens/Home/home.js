@@ -6,26 +6,28 @@ import ListaCards from "../../components/ListaCards/listacards";
 class Home extends Component{
 constructor (props){
     super(props)
-    this.state = {}
-    
+    this.state = {
+        peliculas: []
+    };
 }
 
-componentDidMount(){
-    fetch('https://dh-movies.com/movies')
-        .then( response => response.json() )
-        .then( data => console.log(data) )
-        .catch( error =>	console.log('El error fue: ' + error))
+componentDidMount() {
+    fetch("")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ peliculas: data }); 
+      })
+      .catch((error) => console.log("Error:", error));
+  }
 
 
-
-}
 
 render (){
     return(
         <>
          <Header/>
-         <h2 class="alert alert-primary">Popular movies this week</h2>
-         <ListaCards/>
+         <h2 className="alert alert-primary">Popular movies this week</h2>
+         <ListaCards items={this.state.peliculas} />
         </>
     )
 }

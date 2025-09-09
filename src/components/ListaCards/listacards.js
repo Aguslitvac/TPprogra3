@@ -16,11 +16,20 @@ render (){
         <>
          
          <section class="row cards" id="movies">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+           {props.items.map(peli => (
+        <Card
+        
+        // Foto.
+        // Nombre o título.
+        // Una descripción. La descripción iniciará oculta.
+        // Link o botón "ver descripción" que debe mostrar/ ocultar la descripción.
+        // Link o botón “ir a detalle” para navegar hasta la página de detalle del elemento.
+        // Link, botón o ícono "agregar / quitar de favoritos".
+
+
+          
+        />
+      ))}
 
             
          </section>
