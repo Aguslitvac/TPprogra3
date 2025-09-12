@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./header.css";
 
 
+
 class Header extends Component{
 constructor (props){
     super(props)
@@ -12,6 +13,7 @@ constructor (props){
 render (){
     return(
         <>
+        <img className="logo" src="https://fbi.cults3d.com/uploaders/20952150/illustration-file/3ff506ac-83d8-40ab-b474-3ebc2c727b7a/pngwing.com-2022-02-20T081900.534.png" ></img>
          <h1>UdeSA Movies</h1>
 
         <nav>

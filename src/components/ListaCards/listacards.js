@@ -16,7 +16,7 @@ render (){
         <>
          
          <section class="row cards" id="movies">
-           {props.items.map(peli => (
+           {this.props.items.map(peli => (
         <Card
         
         // Foto.

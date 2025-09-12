@@ -16,6 +16,10 @@ nav {
     font-weight: bold;
 }
 
+.logo{
+    width: 100px;
+    float: left;
+}
 
 @media(min-width: 765px){
     nav {
