@@ -2,6 +2,7 @@ import { Component } from "react";
 import Header from "../../components/Header/header";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 class Home extends Component{
 constructor (props){
@@ -39,8 +40,10 @@ render (){
         <>
          <Header/>
          <h2 className="alert alert-primary">Popular movies this week</h2>
+         <Link to="/peliculas/popular">Ver todas las peliculas populares</Link>
          {this.state.cargandoPopular ?<p>Cargando...</p>: <ListaCards items={this.state.peliculasPopulares.splice(0,5)} />}
-         <h2 className="alert alert-primary">Popular movies this week</h2>
+         <h2 className="alert alert-primary">Top Rated Movies</h2>
+         <Link to="/peliculas/top_rated">Ver todas las peliculas mejores puntuadas</Link>
          {this.state.cargandoTop ?<p>Cargando...</p>: <ListaCards items={this.state.peliculasTop.splice(0,5)} />}
         </>
     )
