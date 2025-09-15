@@ -14,6 +14,7 @@ nav {
 }
 .nav a:hover{
     font-weight: bold;
+   
 }
 
 .logo{
@@ -21,6 +22,11 @@ nav {
     float: left;
 }
 
+logo nav {
+    display: flex;
+    flex-direction: column;
+    
+}
 @media(min-width: 765px){
     nav {
         grid-template-columns: 4fr 3fr;

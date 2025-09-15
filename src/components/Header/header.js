@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 
@@ -13,8 +14,8 @@ constructor (props){
 render (){
     return(
         <>
-        <img className="logo" src="https://fbi.cults3d.com/uploaders/20952150/illustration-file/3ff506ac-83d8-40ab-b474-3ebc2c727b7a/pngwing.com-2022-02-20T081900.534.png" ></img>
-         <h1>UdeSA Movies</h1>
+        <img className="logo" src="https://logodownload.org/wp-content/uploads/2022/12/hbo-max-logo-0.png" ></img>
+        
 
         <nav>
            <ul className="nav nav-tabs my-4">
