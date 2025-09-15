@@ -7,7 +7,8 @@ constructor (props){
     super(props)
     this.state = {
         textoDescripcion: "Mostrar descripcion",
-        verDescripcion: false
+        verDescripcion: false,
+        esFavorito: false
     }
     
 }
@@ -18,6 +19,23 @@ manejarDescripcion(){
     }else{
         this.setState({verDescripcion: true, textoDescripcion:"Ocultar descripcion"})
     }
+}
+
+agregarAFavoritos(){
+    const id = this.props.data.id
+    let favoritos = []
+
+    let datosEnLocalStorage = localStorage.getItem('LSFavoritos')
+    if(datosEnLocalStorage !== null){
+        favoritos = JSON.parse(datosEnLocalStorage)
+    }
+
+    favoritos.push(id)
+    localStorage.setItem('LSFavoritos', JSON.stringify(favoritos))
+    this.setState({
+        esFavorito: true
+    })
+
 }
 
 render (){
@@ -31,6 +49,9 @@ render (){
                    {this.state.verDescripcion ? <p class="card-text">{this.props.data.overview}</p> :""}
                     <a href= {`/detalle/${this.props.data.id} `} class="btn btn-primary">Ver más</a>
                     <a href="" class="btn alert-primary">🩶</a>
+
+                    Aca va el boton
+
                 </div>
             </article>
         </>

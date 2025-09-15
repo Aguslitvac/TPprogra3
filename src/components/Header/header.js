@@ -17,21 +17,22 @@ render (){
          <h1>UdeSA Movies</h1>
 
         <nav>
-            <ul class="nav nav-tabs my-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/peliculas">Películas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="series.html">Series</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="favorites.html">Favoritas</a>
-                </li>
-            </ul>
-            <form class="search-form" action="/search" method="get">
+           <ul className="nav nav-tabs my-4">
+            <li className="nav-item">
+            <Link to="/" className="nav-link" >Home</Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/peliculas" className="nav-link" >Películas</Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/series" className="nav-link">Series</Link>
+            </li>
+            <li className="nav-item">
+            <Link to="/favoritas" className="nav-link">Favoritas</Link>
+            </li>
+        </ul>
+
+            <form className="search-form" action="/search" method="get">
                 <input type="text" class="" name="searchData" placeholder="Buscar..." />
                 <button type="submit" class="btn btn-success btn-sm">Buscar</button>
             </form>
