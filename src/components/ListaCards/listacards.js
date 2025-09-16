@@ -9,9 +9,15 @@ class ListaCards extends Component {
   }
 
   render() {
+      console.log('props.items:', this.props.items); 
+      if (!this.props.items || this.props.items.length === 0) {
+      return <p>No hay resultados.</p>;
+    }
     return (
+      
+      
       <>
-        <section class="row cards" id="movies">
+        <section className="row cards" id="movies">
           {this.props.items.map((peli) => (
             <Card data={peli} />
           ))}

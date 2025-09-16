@@ -23,7 +23,7 @@ render (){
             <Link to="/" className="nav-link" >Home</Link>
             </li>
             <li className="nav-item">
-            <Link to="/peliculas" className="nav-link" >Películas</Link>
+            <Link to="/todaspeliculas" className="nav-link" >Películas</Link>
             </li>
             <li className="nav-item">
             <Link to="/series" className="nav-link">Series</Link>

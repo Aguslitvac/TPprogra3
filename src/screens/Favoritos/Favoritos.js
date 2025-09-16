@@ -14,7 +14,7 @@ componentDidMount() {
     let listaIdFavoritos = []
     let datosEnLocalStorage = localStorage.getItem('LSFavoritos')
      if(datosEnLocalStorage !== null){
-        favoritos = JSON.parse(datosEnLocalStorage)
+        listaIdFavoritos = JSON.parse(datosEnLocalStorage)
         let listaIdFavoritosAux = []
 
         listaIdFavoritos.map(unID => {
