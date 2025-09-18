@@ -14,11 +14,21 @@ constructor (props){
 render (){
     return(
         <>
-        <img className="logo" src="https://logodownload.org/wp-content/uploads/2022/12/hbo-max-logo-0.png" ></img>
-        
+        <article class="header-menu">
+            <article class="buscador-peliculas-index">
+            <form className="search-form" action="/search" method="get">
+                <input type="text" class="campo-mensaje" name="searchData" placeholder="Buscar..." />
+                <button type="submit" class="buscar-boton">Buscar</button>
+            </form>
+        </article>
 
-        <nav>
-           <ul className="nav nav-tabs my-4">
+        <article class="logo-header">
+            <img className="logo" src="" ></img>
+        </article>
+
+        <article class="menu"> 
+            <nav class="header-menu-nav">
+           <ul className="menu-principal">
             <li className="nav-item">
             <Link to="/" className="nav-link" >Home</Link>
             </li>
@@ -32,12 +42,13 @@ render (){
             <Link to="/favoritas" className="nav-link">Favoritas</Link>
             </li>
         </ul>
-
-            <form className="search-form" action="/search" method="get">
-                <input type="text" class="" name="searchData" placeholder="Buscar..." />
-                <button type="submit" class="btn btn-success btn-sm">Buscar</button>
-            </form>
+        
+            
         </nav>
+        </article>
+        </article>
+        
+        
         </>
     )
 }

@@ -1,5 +1,9 @@
 .single-card{
     width: 19%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
 }
 
 .cardBody {
@@ -10,3 +14,72 @@
     margin-right: 15px;
 }
 
+.card-img-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    background-color: black;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.card-title {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.cardBody {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+
+.boton .boton-ver .boton-favoritos {
+    margin: 20px;
+}
+
+.boton {
+    font-size: 14px;
+    background-color: rgb(169, 166, 166);
+    border: 1px solid rgb(169,166,166);
+    color:white;
+    width: 40%;
+    padding: 3px;
+    margin: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.boton-ver {
+    font-size: 14px;
+    background-color: rgb(169, 166, 166);
+    border: 1px solid rgb(169,166,166);
+    color:white;
+    width: 40%;
+    padding: 3px;
+    margin: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+}
+
+.boton-favoritos {
+    font-size: 14px;
+    background-color: rgb(169, 166, 166);
+    border: 1px solid rgb(169,166,166);
+    color:white;
+    width: 40%;
+    padding: 3px;
+    margin: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+}
