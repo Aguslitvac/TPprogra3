@@ -39,12 +39,12 @@ render (){
     return(
         <>
          <Header/>
-         <h2 className="alert alert-primary">Popular movies this week</h2>
-         <Link to="/peliculas/popular">Ver todas las peliculas populares</Link>
-         {this.state.cargandoPopular ?<p>Cargando...</p>: <ListaCards items={this.state.peliculasPopulares.splice(0,5)} />}
-         <h2 className="alert alert-primary">Top Rated Movies</h2>
-         <Link to="/peliculas/top_rated">Ver todas las peliculas mejores puntuadas</Link>
-         {this.state.cargandoTop ?<p>Cargando...</p>: <ListaCards items={this.state.peliculasTop.splice(0,5)} />}
+         <h2 >Popular movies this week</h2>
+         <Link className="pop"  to="/peliculas/popular">Ver todas las peliculas populares</Link>
+         {this.state.cargandoPopular ?<p>Cargando...</p>: <ListaCards tipo="peliculas" items={this.state.peliculasPopulares.splice(0,5)} />}
+         <h2 >Top Rated Movies</h2>
+         <Link className="pop" to="/peliculas/top_rated">Ver todas las peliculas mejores puntuadas</Link>
+         {this.state.cargandoTop ?<p>Cargando...</p>: <ListaCards tipo="peliculas" items={this.state.peliculasTop.splice(0,5)} />}
         </>
     )
 }

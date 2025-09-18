@@ -18,8 +18,8 @@ class ListaCards extends Component {
       
       <>
         <section className="row cards" id="movies">
-          {this.props.items.map((peli) => (
-            <Card data={peli} />
+          {this.props.items.map((articulo) => (
+            <Card data={articulo} tipo={this.props.tipo}/>
           ))}
         </section>
       </>

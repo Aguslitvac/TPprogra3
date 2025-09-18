@@ -1,8 +1,10 @@
 .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: black;
-    margin: 10px;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: #f62e0600;
+  
+  margin: 10px;
+  border-radius: 20px;
 }

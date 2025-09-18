@@ -3,7 +3,7 @@ import Header from "../../components/Header/header";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
 
-class detalle extends Component{
+class detallePeliculas extends Component{
 constructor (props){
     super(props)
     this.state = {
@@ -32,7 +32,7 @@ render (){
          <Header/>
          {this.state.cargando ? <p>Cargando...</p>: 
          <>
-         <h2 class="alert alert-primary">{this.state.unaPelicula.title}</h2>
+         <h2 >{this.state.unaPelicula.title}</h2>
         <section class="row">
             <img class="col-md-6" src={`https://image.tmdb.org/t/p/w500${this.state.unaPelicula.poster_path} `} alt=""/>
             <section class="col-md-6 info">
@@ -55,4 +55,4 @@ render (){
 
 }
 
-export default detalle
+export default detallePeliculas

@@ -10,6 +10,7 @@ constructor (props){
         verDescripcion: false,
         esFavorito: false
     }
+    console.log(props);
     
 }
 
@@ -47,7 +48,9 @@ render (){
                     <h5 class="card-title">{this.props.data.title}</h5>
                     <button className="boton" onClick={()=>this.manejarDescripcion()}>{this.state.textoDescripcion}</button>
                    {this.state.verDescripcion ? <p class="card-text">{this.props.data.overview}</p> :""}
-                    <a href= {`/detalle/${this.props.data.id} `} class="boton-ver">Ver más</a>
+                   {this.props.tipo == "peliculas" ?
+                    <a href= {`/detallepeliculas/${this.props.data.id} `} class="boton-ver">Ver más</a> :
+                    <a href= {`/detalleserie/${this.props.data.id} `} class="boton-ver">Ver más</a> }
                     <a href="" class="boton-favoritos">🩶</a>
 
                     Aca va el boton
