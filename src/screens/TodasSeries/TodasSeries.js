@@ -73,7 +73,7 @@ render (){
     )
 }
 
-<button onClick={() => this.cargarMas()}> Cargar Mas </button>
+<button className="cargando" onClick={() => this.cargarMas()}> Cargar Mas </button>
         </>
     )
 }

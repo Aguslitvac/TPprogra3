@@ -18,7 +18,7 @@ constructor (props){
 
 componentDidMount() {
     console.log(this.props)
-    fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.contenido}?api_key=ed2a98f264a93feb2092da91d83e35a3`)
+    fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.contenido}?api_key=ed2a98f264a93feb2092da91d83e35a3&language=es-ES`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
@@ -32,7 +32,7 @@ componentDidMount() {
 
 cargarMas(){
     console.log(this.props)
-    fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.contenido}?api_key=ed2a98f264a93feb2092da91d83e35a3&page=${this.state.page}` )
+    fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.contenido}?api_key=ed2a98f264a93feb2092da91d83e35a3&page=${this.state.page}&language=es-ES` )
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
@@ -56,9 +56,9 @@ render (){
          <form onSubmit={(e) => e.preventDefault()}>
           <input placeholder="filtrar busqueda" onChange={(e) => this.filtrar(e)}/>
          </form>
-         <h2 className="alert alert-primary">{this.props.match.params.contenido == 'popular' ? 'Popular movies this week' : "Top Rated Movies" }</h2>
+         <h2 >{this.props.match.params.contenido == 'popular' ? 'Popular movies this week' : "Top Rated Movies" }</h2>
          {this.state.cargando ?<p>Cargando...</p>: <ListaCards items={this.state.textoInput.length == 0 ? this.state.peliculas: this.state.peliculasFiltradas} />}
-         <button onClick={() => this.cargarMas()}> Cargar Mas </button>
+         <button className="cargando" onClick={() => this.cargarMas()}> Cargar Mas </button>
 
         </>
     )

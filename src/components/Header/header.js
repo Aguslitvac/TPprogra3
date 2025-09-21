@@ -27,7 +27,7 @@ class Header extends Component {
           </article>
 
           <article class="logo-header">
-            <img className="logo" src=""></img>
+            <img className="logo" src="https://crystalpng.com/wp-content/uploads/2025/04/hbo_max_logo.png"></img>
           </article>
 
           <article class="menu">

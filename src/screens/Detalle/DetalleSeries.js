@@ -14,7 +14,7 @@ constructor (props){
 
 componentDidMount() {
     console.log (this.props)
-    fetch( `https://api.themoviedb.org/3/tv/${this.props.match.params.id}?api_key=ed2a98f264a93feb2092da91d83e35a3 `)
+    fetch( `https://api.themoviedb.org/3/tv/${this.props.match.params.id}?api_key=ed2a98f264a93feb2092da91d83e35a3&language=es-ES `)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)

@@ -16,7 +16,7 @@ constructor (props){
 componentDidMount() {
     let searchParams = new URLSearchParams(this.props.location.search)
     let busqueda = searchParams.get("searchData") 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=ed2a98f264a93feb2092da91d83e35a3&query=${busqueda}`)
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=ed2a98f264a93feb2092da91d83e35a3&query=${busqueda}&language=es-ES`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)

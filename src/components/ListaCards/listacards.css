@@ -4,7 +4,7 @@
   justify-content: center;
   background: linear-gradient(135deg, #8e2de2, #4a00e0);
   color: #f62e0600;
-  
+  gap: 1.5%;
   margin: 10px;
   border-radius: 20px;
 }

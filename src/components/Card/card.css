@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: black;
     
 }
 
@@ -28,6 +29,8 @@
     color: white;
     padding: 20px;
     text-align: center;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .cardBody {
@@ -37,6 +40,7 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
+    color: aliceblue;
 }
 
 .boton .boton-ver .boton-favoritos {
@@ -45,22 +49,24 @@
 
 .boton {
     font-size: 14px;
-    background-color: rgb(169, 166, 166);
-    border: 1px solid rgb(169,166,166);
-    color:white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     width: 40%;
     padding: 3px;
     margin: 2%;
     border-radius: 10px;
     cursor: pointer;
     justify-content: center;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .boton-ver {
     font-size: 14px;
-    background-color: rgb(169, 166, 166);
-    border: 1px solid rgb(169,166,166);
-    color:white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     width: 40%;
     padding: 3px;
     margin: 2%;
@@ -68,13 +74,14 @@
     cursor: pointer;
     justify-content: center;
     text-align: center;
-}
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;}
 
 .boton-favoritos {
     font-size: 14px;
-    background-color: rgb(169, 166, 166);
-    border: 1px solid rgb(169,166,166);
-    color:white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
     width: 40%;
     padding: 3px;
     margin: 2%;
@@ -82,4 +89,7 @@
     cursor: pointer;
     justify-content: center;
     text-align: center;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
+
