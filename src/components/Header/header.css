@@ -13,10 +13,13 @@ nav {
    
 }
 
+.logo-header {
+  display: flex;
+  justify-content: center;
+}
 .logo{
-    width: 100px;
-    float: center;
-
+  width: 160px;            
+  margin: 0;               
 }
 
 logo nav {
@@ -26,14 +29,21 @@ logo nav {
 }
 
 .header-main-container {
-    color: black;
-    width: 100%;
+  width: 100%;
+  color: black;
 }
 
 .header-menu{
-    
-    background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 24px;
+  background-color: #000;
+
 }
+
+
 .buscador-peliculas-index {
     background-color: black;
 }
@@ -66,6 +76,8 @@ logo nav {
     justify-content: space-between;
     padding: 40px;
 }
+
+
 
 .nav-link {
     color: white;

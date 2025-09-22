@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../../components/Header/header";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
+import Footer from "../../components/Footer/Footer";
 
 class TodasSeries extends Component{
 constructor (props){
@@ -74,6 +75,7 @@ render (){
 }
 
 <button className="cargando" onClick={() => this.cargarMas()}> Cargar Mas </button>
+<Footer/>
         </>
     )
 }

@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
 
@@ -33,15 +34,15 @@ render (){
          {this.state.cargando ? <p>Cargando...</p>: 
          <>
          <h2 >{this.state.unaPelicula.title}</h2>
-        <section class="row">
-            <img class="col-md-6" src={`https://image.tmdb.org/t/p/w500${this.state.unaPelicula.poster_path} `} alt=""/>
-            <section class="col-md-6 info">
+        <section className="row">
+            <img className="col-md-6" src={`https://image.tmdb.org/t/p/w500${this.state.unaPelicula.poster_path} `} alt=""/>
+            <section className="col-md-6 info">
                 <h3>Descripción</h3>
-                <p class="description">{this.state.unaPelicula.overview}</p>
-                <p class="mt-0 mb-0" id="release-date"><strong>Fecha de estreno:</strong> {this.state.unaPelicula.release_date}</p>
-                <p class="mt-0 mb-0 length"><strong>Duración:</strong> {this.state.unaPelicula.runtime}</p>
-                <p class="mt-0 mb-0 length"><strong>Calificacion:</strong> {this.state.unaPelicula.vote_average}</p>
-                <p class="mt-0 mb-0 length"><strong>Genero:</strong> {this.state.unaPelicula.genres.map(unGenero=> `${unGenero.name},`)}</p>
+                <p className="description">{this.state.unaPelicula.overview}</p>
+                <p className="mt-0 mb-0" id="release-date"><strong>Fecha de estreno:</strong> {this.state.unaPelicula.release_date}</p>
+                <p className="mt-0 mb-0 length"><strong>Duración:</strong> {this.state.unaPelicula.runtime}</p>
+                <p className="mt-0 mb-0 length"><strong>Calificacion:</strong> {this.state.unaPelicula.vote_average}</p>
+                <p className="mt-0 mb-0 length"><strong>Genero:</strong> {this.state.unaPelicula.genres.map(unGenero=> `${unGenero.name},`)}</p>
 
 
                 
@@ -49,6 +50,7 @@ render (){
         </section>
         </>
         }
+         <Footer/>
         </>
     )
 }

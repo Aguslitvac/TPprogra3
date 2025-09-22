@@ -45,10 +45,9 @@ class Card extends Component {
     const tipo = this.props.tipo;
     let favoritos = [];
 
-    let datosEnLocalStorage = localStorage.getItem("LSFavoritos");
-    if (datosEnLocalStorage !== null) {
-      favoritos = JSON.parse(datosEnLocalStorage);
-    }
+     const datos = localStorage.getItem("LSFavoritos");
+  if (datos !== null) favoritos = JSON.parse(datos);
+
 
     let existe = false;
     let indice = -1;
@@ -60,16 +59,21 @@ class Card extends Component {
       }
     }
 
-    if (existe == true) {
-      favoritos.splice(indice, 1);
-      this.setState({ esFavorito: false });
-    } else {
-      favoritos.push({ id: id, tipo: tipo });
-      this.setState({ esFavorito: true });
-    }
-
-    localStorage.setItem("LSFavoritos", JSON.stringify(favoritos));
+   if (existe) {
+    favoritos.splice(indice, 1);
+    this.setState({ esFavorito: false }, () => {
+      localStorage.setItem("LSFavoritos", JSON.stringify(favoritos));
+      if (this.props.actualizarFavoritos) {
+        this.props.actualizarFavoritos();
+      }
+    });
+     } else {
+    favoritos.push({ id, tipo });
+    this.setState({ esFavorito: true }, () => {
+      localStorage.setItem("LSFavoritos", JSON.stringify(favoritos));
+    });
   }
+}
 
   render() {
     return (

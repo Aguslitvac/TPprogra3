@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Header from "../../components/Header/header";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
+import Footer from "../../components/Footer/Footer";
+
 
 class Peliculas extends Component{
 constructor (props){
@@ -59,6 +61,7 @@ render (){
          <h2 >{this.props.match.params.contenido == 'popular' ? 'Popular movies this week' : "Top Rated Movies" }</h2>
          {this.state.cargando ?<p>Cargando...</p>: <ListaCards items={this.state.textoInput.length == 0 ? this.state.peliculas: this.state.peliculasFiltradas} />}
          <button className="cargando" onClick={() => this.cargarMas()}> Cargar Mas </button>
+                         <Footer/>
 
         </>
     )

@@ -2,6 +2,7 @@ import { Component } from "react";
 import Header from "../../components/Header/header";
 import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
+import Footer from "../../components/Footer/Footer";
 
 class detalleSerie extends Component{
 constructor (props){
@@ -49,6 +50,8 @@ render (){
         </section>
         </>
         }
+                 <Footer/>
+
         </>
     )
 }
