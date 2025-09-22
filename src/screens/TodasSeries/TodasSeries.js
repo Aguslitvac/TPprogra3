@@ -56,7 +56,7 @@ render (){
         <>
          <Header/>
          <form onSubmit={(e) => e.preventDefault()}>
-          <input placeholder="filtrar busqueda" onChange={(e) => this.filtrar(e)}/>
+          <input className="filtro" placeholder="Filtrar busqueda" onChange={(e) => this.filtrar(e)}/>
          </form>
          <h2 > Todas las series</h2>
          

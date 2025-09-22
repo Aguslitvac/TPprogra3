@@ -1,19 +1,39 @@
 .single-card{
-    width: 19%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: black;
+  flex-direction: column;
+  background: #0b0b0b;
+  border-radius: 16px;
+  width: 100%;                
+  max-width: 260px;          
+  margin: 10px auto;
     
 }
 
 .cardBody {
-    margin-top: 20px;
-}
+display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding: 12px;
+  color: #f2f5f9;}
 
 .cardBody button{
-    margin-right: 15px;
-}
+ display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 36px;
+  padding: 8px 12px;
+  margin: 0;               
+  border-radius: 10px;
+  border: 1px solid #1f1f1f;
+  background: #3f3e3e;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;    
+  }
 
 .card-img-top {
     display: flex;
@@ -43,28 +63,12 @@
     color: aliceblue;
 }
 
-.boton .boton-ver .boton-favoritos {
-    margin: 20px;
-}
 
-.boton {
-    font-size: 14px;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
-    width: 40%;
-    padding: 3px;
-    margin: 2%;
-    border-radius: 10px;
-    cursor: pointer;
-    justify-content: center;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 .boton-ver {
     font-size: 14px;
-    background-color: rgb(0, 0, 0);
+  background: #3f3e3e;
     border: 1px solid rgb(0, 0, 0);
     color:rgb(255, 255, 255);
     width: 40%;
@@ -77,19 +81,5 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;}
 
-.boton-favoritos {
-    font-size: 14px;
-    background-color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    color:rgb(255, 255, 255);
-    width: 40%;
-    padding: 3px;
-    margin: 2%;
-    border-radius: 10px;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 

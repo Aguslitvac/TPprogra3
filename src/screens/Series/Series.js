@@ -54,7 +54,7 @@ render (){
         <>
          <Header/>
          <form onSubmit={(e) => e.preventDefault()}>
-          <input placeholder="filtrar busqueda" onChange={(e) => this.filtrar(e)}/>
+          <input className="filtro" placeholder="Filtrar busqueda" onChange={(e) => this.filtrar(e)}/>
          </form>
          <h2 className="alert alert-primary">{this.props.match.params.contenido == 'popular' ? 'Popular movies this week' : "Top Rated Movies" }</h2>
          {this.state.cargando ?<p>Cargando...</p>: <ListaCards items={this.state.textoInput.length == 0 ? this.state.series: this.state.seriesFiltradas} />}

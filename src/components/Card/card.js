@@ -1,5 +1,7 @@
 import { Component } from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
+
 
 class Card extends Component {
   constructor(props) {
@@ -72,36 +74,34 @@ class Card extends Component {
   render() {
     return (
       <>
-        <article class="single-card">
+        <article className="single-card">
           <img
             src={`https://image.tmdb.org/t/p/w500${this.props.data.poster_path} `}
-            class="card-img-top"
+            className="card-img-top"
             alt="..."
           />
-          <div class="cardBody">
-            <h5 class="card-title">{this.props.data.title}</h5>
+          <div className="cardBody">
+            <h5 className="card-title">{this.props.data.title}</h5>
             <button className="boton" onClick={() => this.manejarDescripcion()}>
               {this.state.textoDescripcion}
             </button>
             {this.state.verDescripcion ? (
-              <p class="card-text">{this.props.data.overview}</p>
+              <p className="card-text">{this.props.data.overview}</p>
             ) : (
               ""
             )}
             {this.props.tipo == "peliculas" ? (
-              <a
-                href={`/detallepeliculas/${this.props.data.id} `}
-                class="boton-ver"
+              <Link to={`/detallepeliculas/${this.props.data.id} `}
+                className="boton-ver"
               >
                 Ver más
-              </a>
+              </Link>
             ) : (
-              <a
-                href={`/detalleserie/${this.props.data.id} `}
-                class="boton-ver"
+              <Link to={`/detalleserie/${this.props.data.id} `}
+                className="boton-ver"
               >
                 Ver más
-              </a>
+              </Link>
             )}
             <button
               className="boton-favoritos"

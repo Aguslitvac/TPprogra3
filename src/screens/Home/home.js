@@ -4,6 +4,8 @@ import Card from "../../components/Card/card";
 import ListaCards from "../../components/ListaCards/listacards";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
+
+
 class Home extends Component{
 constructor (props){
     super(props)
@@ -39,12 +41,17 @@ render (){
     return(
         <>
          <Header/>
+          
          <h2 >Popular movies this week</h2>
          <Link className="pop"  to="/peliculas/popular">Ver todas las peliculas populares</Link>
          {this.state.cargandoPopular ?<p>Cargando...</p>: <ListaCards tipo="peliculas" items={this.state.peliculasPopulares.splice(0,5)} />}
+            
+
          <h2 >Top Rated Movies</h2>
          <Link className="pop" to="/peliculas/top_rated">Ver todas las peliculas mejores puntuadas</Link>
          {this.state.cargandoTop ?<p>Cargando...</p>: <ListaCards tipo="peliculas" items={this.state.peliculasTop.splice(0,5)} />}
+          
+
         </>
     )
 }

@@ -16,21 +16,34 @@ code {
 
 .pop{
   display: inline-block;
-  color: rgb(79, 3, 244);
-  background-color: azure;
-  padding: 2px;
-  margin: auto;
-  width: auto;
+  padding: 8px 16px;
+  margin: 12px auto;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4f03f4;             
+  background-color: #f0f8ff;  
+  border: 1px solid #4f03f4;
+  text-decoration: none;
+ 
 }
 
 .menu-principal {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
   justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 0;
 }
 
 .menu-principal li {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
    
     
 }
@@ -41,9 +54,12 @@ header a {
 }
 
 h2{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 18px auto 8px;
   text-align: center;
-  font-size: 50px;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans';
+  font-weight: 800;
+  font-size: clamp(24px, 4.2vw, 42px); /* responsive en vez de 50px fijo */
+  color: #fff;
 }
 
 .cargando{
@@ -55,4 +71,10 @@ h2{
   border-color: 2px solid #ffffff;
   margin: 0 auto;
   display: block;
+}
+
+
+.filtro{
+margin: 1%;
+
 }

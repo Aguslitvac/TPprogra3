@@ -31,7 +31,7 @@ render (){
     return(
         <>
          <Header/>
-         <h2 className="alert alert-primary">Buscando Peliculas Para</h2>
+         <h2 className="alert alert-primary">Resultados de Búsqueda </h2>
          {this.state.cargandoPopular ?<p>Cargando...</p>: <ListaCards items={this.state.peliculas} />}
         </>
     )
